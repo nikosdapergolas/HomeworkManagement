@@ -1,0 +1,10 @@
+C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.AssemblyReference.cache
+C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Form1.resources
+C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Properties.Resources.resources
+C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.GenerateResource.cache
+C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.CoreCompileInputs.cache
+C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.exe.config
+C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.exe
+C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.pdb
+C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.exe
+C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.pdb
