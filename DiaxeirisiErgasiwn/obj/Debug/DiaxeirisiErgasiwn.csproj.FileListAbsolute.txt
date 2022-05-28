@@ -8,3 +8,13 @@ C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\bin\Debug\Diax
 C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.pdb
 C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.exe
 C:\Users\nikos\source\repos\DiaxeirisiErgasiwn\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.pdb
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.exe.config
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.exe
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.pdb
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.AssemblyReference.cache
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Form1.resources
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Properties.Resources.resources
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.GenerateResource.cache
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.CoreCompileInputs.cache
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.exe
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.pdb
