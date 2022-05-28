@@ -21,6 +21,21 @@ namespace DiaxeirisiErgasiwn
         {
             Application.Exit();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            login(textBox1.Text, textBox2.Text);
+        }
+
+        void login(string username, string password)
+        {
+            MessageBox.Show("Hi " + username + ", your password is: " + password , "Message from our team");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 
     public class Person 
