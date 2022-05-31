@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,12 +31,66 @@ namespace DiaxeirisiErgasiwn
 
         void login(string username, string password)
         {
-            MessageBox.Show("Hi " + username + ", your password is: " + password , "Message from our team");
+            // Name of database file
+            string fileName = "HomeworkManagement.db";
+            FileInfo f = new FileInfo(fileName);
+            // Full path to it
+            string path = f.FullName;
+
+            // Connection string with relative path
+            string connectionstring = "Data Source=" + path + ";Version=3;";
+
+            SQLiteConnection conn = new SQLiteConnection(connectionstring);
+            conn.Open();
+            string query1 = "select * from Student where username='"+username+"' and password='"+password+"';";
+            SQLiteCommand cmd = new SQLiteCommand(query1, conn);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+                      
+            if(reader.Read())
+            {
+                MessageBox.Show("welcome!! :)","Login Successful");
+            }
+            else
+            {
+                MessageBox.Show("There is no such user...sorry", "ERROR");
+            }
+            
+            conn.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Name of database file
+            string fileName = "HomeworkManagement.db";
+            FileInfo f = new FileInfo(fileName);
+            // Full path to it
+            string path = f.FullName;
+
+            // Connection string with relative path
+            string connectionstring = "Data Source=" + path + ";Version=3;";
+            SQLiteConnection conn = new SQLiteConnection(connectionstring);
+
+            conn.Open();
+            string query1 = "select * from Admin;";
+            SQLiteCommand cmd = new SQLiteCommand(query1,conn);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            while(reader.Read())
+            {
+                MessageBox.Show(reader.GetString(1) + " " + reader.GetString(2) + " " + reader.GetString(3) + " ");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string fileName = "HomeworkManagement.db";
+            FileInfo f = new FileInfo(fileName);
+            string fullname = f.FullName;
+            MessageBox.Show(fullname);
         }
     }
 
