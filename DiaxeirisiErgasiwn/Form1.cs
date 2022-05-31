@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,63 @@ namespace DiaxeirisiErgasiwn
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello world");
+            Application.Exit();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            login(textBox1.Text, textBox2.Text);
+        }
+
+        void login(string username, string password)
+        {
+            string connectionstring = "Data Source=C:/Users/nikos/source/repos/DiaxeirisiErgasiwn/DiaxeirisiErgasiwn/bin/Debug/HomeworkManagement.db;Version=3;";
+            SQLiteConnection conn = new SQLiteConnection(connectionstring);
+            conn.Open();
+            string query1 = "select * from Student where username='"+username+"' and password='"+password+"';";
+            SQLiteCommand cmd = new SQLiteCommand(query1, conn);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+                      
+            if(reader.Read())
+            {
+                MessageBox.Show("welcome!! :)","Login Successful");
+                /*
+                if (reader.GetString(4) == "")
+                {
+                    MessageBox.Show("There is no such user...sorry", "ERROR");
+                }
+                else
+                {
+                    MessageBox.Show("welcome!! :)");
+                }
+                */
+                //MessageBox.Show(reader.GetString(1) + " " + reader.GetString(2) + " " + reader.GetString(3) + " ");
+            }
+            else
+            {
+                MessageBox.Show("There is no such user...sorry", "ERROR");
+            }
+            
+            conn.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string connectionstring = "Data Source=C:/Users/nikos/source/repos/DiaxeirisiErgasiwn/DiaxeirisiErgasiwn/bin/Debug/HomeworkManagement.db;Version=3;";
+            SQLiteConnection conn = new SQLiteConnection(connectionstring);
+            conn.Open();
+            string query1 = "select * from Admin;";
+            SQLiteCommand cmd = new SQLiteCommand(query1,conn);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+            while(reader.Read())
+            {
+                MessageBox.Show(reader.GetString(1) + " " + reader.GetString(2) + " " + reader.GetString(3) + " ");
+            }
         }
     }
 
