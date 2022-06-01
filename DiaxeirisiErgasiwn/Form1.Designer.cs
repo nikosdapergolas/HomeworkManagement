@@ -29,7 +29,6 @@ namespace DiaxeirisiErgasiwn
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.studentLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +43,7 @@ namespace DiaxeirisiErgasiwn
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +64,7 @@ namespace DiaxeirisiErgasiwn
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentLoginToolStripMenuItem,
@@ -73,37 +72,44 @@ namespace DiaxeirisiErgasiwn
             this.adminLoginToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1084, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1084, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // studentLoginToolStripMenuItem
             // 
-            this.studentLoginToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.studentLoginToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentLoginToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.studentLoginToolStripMenuItem.Name = "studentLoginToolStripMenuItem";
-            this.studentLoginToolStripMenuItem.Size = new System.Drawing.Size(136, 29);
+            this.studentLoginToolStripMenuItem.Size = new System.Drawing.Size(129, 26);
             this.studentLoginToolStripMenuItem.Text = "Student login";
+            this.studentLoginToolStripMenuItem.Click += new System.EventHandler(this.studentLoginToolStripMenuItem_Click);
             // 
             // professorLoginToolStripMenuItem
             // 
-            this.professorLoginToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.professorLoginToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.professorLoginToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.professorLoginToolStripMenuItem.Name = "professorLoginToolStripMenuItem";
-            this.professorLoginToolStripMenuItem.Size = new System.Drawing.Size(151, 29);
+            this.professorLoginToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.professorLoginToolStripMenuItem.Text = "Professor login";
+            this.professorLoginToolStripMenuItem.Click += new System.EventHandler(this.professorLoginToolStripMenuItem_Click);
             // 
             // adminLoginToolStripMenuItem
             // 
-            this.adminLoginToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.adminLoginToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adminLoginToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.adminLoginToolStripMenuItem.Name = "adminLoginToolStripMenuItem";
-            this.adminLoginToolStripMenuItem.Size = new System.Drawing.Size(127, 29);
+            this.adminLoginToolStripMenuItem.Size = new System.Drawing.Size(120, 26);
             this.adminLoginToolStripMenuItem.Text = "Admin login";
+            this.adminLoginToolStripMenuItem.Click += new System.EventHandler(this.adminLoginToolStripMenuItem_Click);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Silver;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button2.Location = new System.Drawing.Point(132, 226);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(146, 50);
@@ -114,7 +120,7 @@ namespace DiaxeirisiErgasiwn
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label2);
@@ -130,11 +136,11 @@ namespace DiaxeirisiErgasiwn
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label3.Location = new System.Drawing.Point(156, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 24);
+            this.label3.Size = new System.Drawing.Size(90, 22);
             this.label3.TabIndex = 8;
             this.label3.Text = "Password";
             // 
@@ -150,11 +156,11 @@ namespace DiaxeirisiErgasiwn
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label2.Location = new System.Drawing.Point(151, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 24);
+            this.label2.Size = new System.Drawing.Size(92, 22);
             this.label2.TabIndex = 6;
             this.label2.Text = "Username";
             // 
@@ -169,11 +175,11 @@ namespace DiaxeirisiErgasiwn
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Blue;
-            this.linkLabel1.Location = new System.Drawing.Point(295, 279);
+            this.linkLabel1.Location = new System.Drawing.Point(272, 291);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(75, 24);
+            this.linkLabel1.Size = new System.Drawing.Size(67, 21);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Sign up";
@@ -181,43 +187,44 @@ namespace DiaxeirisiErgasiwn
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(45, 279);
+            this.label1.Location = new System.Drawing.Point(57, 291);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 24);
+            this.label1.Size = new System.Drawing.Size(221, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Μήπως δεν έχετε account? ";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(137, 138);
+            this.button3.Location = new System.Drawing.Point(12, 186);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 4;
-            this.button3.Text = "button3";
+            this.button3.Text = "test";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // label4
             // 
-            this.button4.Location = new System.Drawing.Point(137, 186);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label4.Location = new System.Drawing.Point(347, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(383, 31);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Welcome to the Students Portal";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1084, 661);
             this.ControlBox = false;
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
@@ -252,7 +259,7 @@ namespace DiaxeirisiErgasiwn
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -14,6 +14,11 @@ namespace DiaxeirisiErgasiwn
 {
     public partial class Form1 : Form
     {
+
+        public static bool student_logging_in;
+        public static bool professor_logging_in;
+        public static bool admin_logging_in;
+
         public Form1()
         {
             InitializeComponent();
@@ -26,10 +31,27 @@ namespace DiaxeirisiErgasiwn
 
         private void button2_Click(object sender, EventArgs e)
         {
-            login(textBox1.Text, textBox2.Text);
+            if(student_logging_in == true)
+            {
+                // From here we call the student login function
+                student_login(textBox1.Text, textBox2.Text);
+            }  
+            if(professor_logging_in == true)
+            {
+                // From here we call the professor login function
+                professor_login(textBox1.Text, textBox2.Text);
+            }
+            if(admin_logging_in == true)
+            {
+                // From here we call the admin login function
+                admin_login(textBox1.Text, textBox2.Text);
+            }
         }
 
-        void login(string username, string password)
+        /// <summary>
+        /// The function is here for the student to login when the student_logging_in flag is true
+        /// </summary>
+        void student_login(string username, string password)
         {
             // Name of database file
             string fileName = "HomeworkManagement.db";
@@ -48,7 +70,7 @@ namespace DiaxeirisiErgasiwn
                       
             if(reader.Read())
             {
-                MessageBox.Show("welcome!! :)","Login Successful");
+                MessageBox.Show("welcome "+ reader.GetString(1) + " " + reader.GetString(2) + "!! :)","Login Successful");
             }
             else
             {
@@ -58,13 +80,82 @@ namespace DiaxeirisiErgasiwn
             conn.Close();
         }
 
+        /// <summary>
+        /// The function is here for the professor to login when the professor_logging_in flag is true
+        /// </summary>
+        void professor_login(string username, string password)
+        {
+            // Name of database file
+            string fileName = "HomeworkManagement.db";
+            FileInfo f = new FileInfo(fileName);
+            // Full path to it
+            string path = f.FullName;
+
+            // Connection string with relative path
+            string connectionstring = "Data Source=" + path + ";Version=3;";
+
+            SQLiteConnection conn = new SQLiteConnection(connectionstring);
+            conn.Open();
+            string query1 = "select * from Professor where username='" + username + "' and password='" + password + "';";
+            SQLiteCommand cmd = new SQLiteCommand(query1, conn);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                MessageBox.Show("welcome " + reader.GetString(1) + " " + reader.GetString(2) + "!! :)", "Login Successful");
+            }
+            else
+            {
+                MessageBox.Show("There is no such user...sorry", "ERROR");
+            }
+
+            conn.Close();
+        }
+
+        /// <summary>
+        /// The function is here for the admin to login when the admin_logging_in flag is true
+        /// </summary>
+        void admin_login(string username, string password)
+        {
+            // Name of database file
+            string fileName = "HomeworkManagement.db";
+            FileInfo f = new FileInfo(fileName);
+            // Full path to it
+            string path = f.FullName;
+
+            // Connection string with relative path
+            string connectionstring = "Data Source=" + path + ";Version=3;";
+
+            SQLiteConnection conn = new SQLiteConnection(connectionstring);
+            conn.Open();
+            string query1 = "select * from Admin where username='" + username + "' and password='" + password + "';";
+            SQLiteCommand cmd = new SQLiteCommand(query1, conn);
+            SQLiteDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+                MessageBox.Show("welcome " + reader.GetString(1) + " " + reader.GetString(2) + "!! :)", "Login Successful");
+            }
+            else
+            {
+                MessageBox.Show("There is no such user...sorry", "ERROR");
+            }
+
+            conn.Close();
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            // Initialising some flags
+            studentLoginToolStripMenuItem.BackColor = Color.Black;
+            student_logging_in = true;
+            professor_logging_in = false;
+            admin_logging_in = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            /*
             // Name of database file
             string fileName = "HomeworkManagement.db";
             FileInfo f = new FileInfo(fileName);
@@ -83,14 +174,60 @@ namespace DiaxeirisiErgasiwn
             {
                 MessageBox.Show(reader.GetString(1) + " " + reader.GetString(2) + " " + reader.GetString(3) + " ");
             }
+            */
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        
+
+        private void studentLoginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string fileName = "HomeworkManagement.db";
-            FileInfo f = new FileInfo(fileName);
-            string fullname = f.FullName;
-            MessageBox.Show(fullname);
+            // When this is clicked, i do the checks in the login form to ensure
+            // that the program knows who is logging in (In this case the student)
+
+            // Some flags
+            student_logging_in = true;
+            professor_logging_in = false;
+            admin_logging_in = false;
+
+            studentLoginToolStripMenuItem.BackColor = Color.Black;
+            professorLoginToolStripMenuItem.BackColor = panel1.BackColor;
+            adminLoginToolStripMenuItem.BackColor = panel1.BackColor;
+
+            label4.Text = "Welcome to the Students Portal";
+        }
+
+        private void professorLoginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // When this is clicked, i do the checks in the login form to ensure
+            // that the program knows who is logging in (In this case the professor)
+
+            // Some flags
+            student_logging_in = false;
+            professor_logging_in = true;
+            admin_logging_in = false;
+
+            studentLoginToolStripMenuItem.BackColor = panel1.BackColor;
+            professorLoginToolStripMenuItem.BackColor = Color.Black;
+            adminLoginToolStripMenuItem.BackColor = panel1.BackColor;
+
+            label4.Text = "             Professors Login";
+        }
+
+        private void adminLoginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // When this is clicked, i do the checks in the login form to ensure
+            // that the program knows who is logging in (In this case the admin)
+
+            // Some flags
+            student_logging_in = false;
+            professor_logging_in = false;
+            admin_logging_in = true;
+
+            studentLoginToolStripMenuItem.BackColor = panel1.BackColor;
+            professorLoginToolStripMenuItem.BackColor = panel1.BackColor;
+            adminLoginToolStripMenuItem.BackColor = Color.Black;
+
+            label4.Text = "                Admins only!";
         }
     }
 
