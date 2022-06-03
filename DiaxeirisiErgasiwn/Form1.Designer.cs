@@ -152,6 +152,9 @@ namespace DiaxeirisiErgasiwn
             this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(321, 29);
             this.textBox2.TabIndex = 7;
+            this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
+            this.textBox2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyDown);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label2
             // 
@@ -183,6 +186,7 @@ namespace DiaxeirisiErgasiwn
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Sign up";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label1
             // 

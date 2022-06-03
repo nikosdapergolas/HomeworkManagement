@@ -35,6 +35,7 @@ S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Ent
 S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\EntityFramework.SqlServer.xml
 S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\System.Data.SQLite.xml
 S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.CopyComplete
+<<<<<<< HEAD
 C:\Users\alexm\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.exe.config
 C:\Users\alexm\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.exe
 C:\Users\alexm\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.pdb
@@ -57,3 +58,25 @@ C:\Users\alexm\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\Diax
 C:\Users\alexm\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.pdb
 C:\Users\alexm\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Professor_Assignement_Creation.resources
 C:\Users\alexm\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Professor_Front_Page.resources
+=======
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.exe.config
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.exe
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.pdb
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\EntityFramework.dll
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\System.Data.SQLite.dll
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\EntityFramework.xml
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\System.Data.SQLite.xml
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.AssemblyReference.cache
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Form1.resources
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Properties.Resources.resources
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.GenerateResource.cache
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.CoreCompileInputs.cache
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.exe
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.pdb
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.StudentSignUp.resources
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Guna.UI2.dll
+>>>>>>> 9cbbff33e8fb765f96dc2b7c6b960792ae5573a9
