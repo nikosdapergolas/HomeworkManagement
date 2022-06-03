@@ -229,6 +229,13 @@ namespace DiaxeirisiErgasiwn
 
             label4.Text = "                Admins only!";
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            StudentSignUp signup = new StudentSignUp();
+            signup.Show();
+            this.Hide();
+        }
     }
 
     public class Person 
