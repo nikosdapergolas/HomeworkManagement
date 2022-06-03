@@ -80,3 +80,7 @@ C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\Diax
 C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.StudentSignUp.resources
 C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Guna.UI2.dll
 >>>>>>> 9cbbff33e8fb765f96dc2b7c6b960792ae5573a9
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Guna.UI2.dll
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Professor_Assignement_Creation.resources
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Professor_Front_Page.resources
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.StudentSignUp.resources
