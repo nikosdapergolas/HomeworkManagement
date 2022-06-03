@@ -103,6 +103,9 @@ namespace DiaxeirisiErgasiwn
             if (reader.Read())
             {
                 MessageBox.Show("welcome " + reader.GetString(1) + " " + reader.GetString(2) + "!! :)", "Login Successful");
+                this.Hide();
+                Professor_Front_Page form = new Professor_Front_Page();
+                form.Show();
             }
             else
             {
