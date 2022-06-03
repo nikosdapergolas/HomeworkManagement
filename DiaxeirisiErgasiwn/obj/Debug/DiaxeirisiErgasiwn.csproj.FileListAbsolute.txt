@@ -54,3 +54,4 @@ C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\Diax
 C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.exe
 C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.pdb
 C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.StudentSignUp.resources
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Guna.UI2.dll

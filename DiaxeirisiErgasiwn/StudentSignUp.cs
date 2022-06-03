@@ -20,6 +20,16 @@ namespace DiaxeirisiErgasiwn
         }
 
         private void button1_Click(object sender, EventArgs e)
+        { 
+            
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
             try
             {
@@ -46,32 +56,19 @@ namespace DiaxeirisiErgasiwn
 
                     SQLiteConnection conn = new SQLiteConnection(connectionstring);
                     conn.Open();
-                    string query1 = "INSERT INTO Student(name,surname,email,username,password) VALUES ('" + name + "','" + surname + "','"+email+"','"+username+"','"+password+"');";
+                    string query1 = "INSERT INTO Student(name,surname,email,username,password) VALUES ('" + name + "','" + surname + "','" + email + "','" + username + "','" + password + "');";
                     SQLiteCommand cmd = new SQLiteCommand(query1, conn);
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
-                    if (reader.Read())
-                    {
-                        MessageBox.Show("welcome " + reader.GetString(1) + " " + reader.GetString(2) + "!! :)", "Login Successful");
-                    }
-                    else
-                    {
-                        MessageBox.Show("There is no such user...sorry", "ERROR");
-                    }
-
                     conn.Close();
+                    MessageBox.Show("You have been added successfully!! /nRedirecting you back to login page.", "Sign in successful.");
                 }
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
                 // Default error message
                 MessageBox.Show(exception.Message);
             }
-            
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
 
         }
     }
