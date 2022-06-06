@@ -74,6 +74,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NikosTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NikosTestForm.Designer.cs">
+      <DependentUpon>NikosTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Professor_Assignement_Creation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NikosTestForm.resx">
+      <DependentUpon>NikosTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Professor_Assignement_Creation.resx">
       <DependentUpon>Professor_Assignement_Creation.cs</DependentUpon>

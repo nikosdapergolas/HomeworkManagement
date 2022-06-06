@@ -24,11 +24,17 @@ namespace DiaxeirisiErgasiwn
             InitializeComponent();
         }
 
+        /// <summary>
+        /// The exit button
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Depending on who logs in, it calls their login function
+        /// </summary>
         private void button2_Click(object sender, EventArgs e)
         {
             if(student_logging_in == true)
@@ -158,6 +164,9 @@ namespace DiaxeirisiErgasiwn
 
         private void button3_Click(object sender, EventArgs e)
         {
+            NikosTestForm test = new NikosTestForm();
+            test.Show();
+            this.Hide();
             /*
             // Name of database file
             string fileName = "HomeworkManagement.db";
@@ -254,7 +263,26 @@ namespace DiaxeirisiErgasiwn
         {
             if (e.KeyCode == Keys.Enter)
             {
-                button2_Click(this, new EventArgs());
+                guna2Button1_Click(this, new EventArgs());
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (student_logging_in == true)
+            {
+                // From here we call the student login function
+                student_login(textBox1.Text, textBox2.Text);
+            }
+            if (professor_logging_in == true)
+            {
+                // From here we call the professor login function
+                professor_login(textBox1.Text, textBox2.Text);
+            }
+            if (admin_logging_in == true)
+            {
+                // From here we call the admin login function
+                admin_login(textBox1.Text, textBox2.Text);
             }
         }
     }

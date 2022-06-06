@@ -34,8 +34,8 @@ namespace DiaxeirisiErgasiwn
             this.studentLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.professorLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adminLoginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,6 +44,7 @@ namespace DiaxeirisiErgasiwn
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -103,35 +104,37 @@ namespace DiaxeirisiErgasiwn
             this.adminLoginToolStripMenuItem.Text = "Admin login";
             this.adminLoginToolStripMenuItem.Click += new System.EventHandler(this.adminLoginToolStripMenuItem_Click);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button2.Location = new System.Drawing.Point(132, 226);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 50);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Login";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(344, 186);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(395, 333);
             this.panel1.TabIndex = 3;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(111, 231);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button1.TabIndex = 22;
+            this.guna2Button1.Text = "Login!";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // label3
             // 
@@ -201,9 +204,9 @@ namespace DiaxeirisiErgasiwn
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 186);
+            this.button3.Location = new System.Drawing.Point(12, 168);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(106, 51);
             this.button3.TabIndex = 4;
             this.button3.Text = "test";
             this.button3.UseVisualStyleBackColor = true;
@@ -254,7 +257,6 @@ namespace DiaxeirisiErgasiwn
         private System.Windows.Forms.ToolStripMenuItem studentLoginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem professorLoginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adminLoginToolStripMenuItem;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox2;
@@ -264,6 +266,8 @@ namespace DiaxeirisiErgasiwn
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

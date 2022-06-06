@@ -84,3 +84,4 @@ S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Gun
 S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Professor_Assignement_Creation.resources
 S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Professor_Front_Page.resources
 S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.StudentSignUp.resources
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.NikosTestForm.resources
