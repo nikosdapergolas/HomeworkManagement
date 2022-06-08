@@ -244,7 +244,7 @@ namespace DiaxeirisiErgasiwn
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            StudentSignUp signup = new StudentSignUp();
+            StudentSignUp signup = new StudentSignUp(this);
             signup.Show();
             this.Hide();
         }

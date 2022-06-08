@@ -14,8 +14,10 @@ namespace DiaxeirisiErgasiwn
 {
     public partial class StudentSignUp : Form
     {
-        public StudentSignUp()
+        Form1 globalForm;
+        public StudentSignUp(Form1 form1)
         {
+            globalForm = form1;
             InitializeComponent();
         }
 
@@ -36,6 +38,10 @@ namespace DiaxeirisiErgasiwn
                 if (textBox5.Text != textBox6.Text)
                 {
                     MessageBox.Show("Password are not the same, Try again", "Error");
+                }
+                else if(textBox4.Text == "")
+                {
+                    MessageBox.Show("You cannot leave the username field empty, Try again", "Error");
                 }
                 else
                 {
@@ -70,6 +76,18 @@ namespace DiaxeirisiErgasiwn
                 MessageBox.Show(exception.Message);
             }
 
+        }
+
+        private void StudentSignUp_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            globalForm.Show();
+            //Form1.ActiveForm.BringToFront();
+            this.Close();
         }
     }
 }
