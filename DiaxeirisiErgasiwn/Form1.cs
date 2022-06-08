@@ -19,6 +19,8 @@ namespace DiaxeirisiErgasiwn
         public static bool professor_logging_in;
         public static bool admin_logging_in;
 
+        //euakiii
+
         public Form1()
         {
             InitializeComponent();

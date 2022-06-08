@@ -39,6 +39,22 @@ namespace DiaxeirisiErgasiwn
                 if (fileFormat == "zip" || fileFormat == "pdf" || fileFormat == "rar")
                 {
                     MessageBox.Show(file,"Success!");
+
+                    // Name of database file
+                    string fileName = "HomeworkManagement.db";
+                    FileInfo f = new FileInfo(fileName);
+                    // Full path to it
+                    string path = f.FullName;
+
+                    // Connection string with relative path
+                    string connectionstring = "Data Source=" + path + ";Version=3;";
+
+                    SQLiteConnection conn = new SQLiteConnection(connectionstring);
+                    conn.Open();
+                    string query1 = "insert into Homework(file) values('"+e.Data.GetData(DataFormats.FileDrop)+"');";
+                    SQLiteCommand cmd = new SQLiteCommand(query1, conn);
+                    SQLiteDataReader reader = cmd.ExecuteReader();
+                    MessageBox.Show("Successfully added the file...i think");
                 }
                 else
                 {
