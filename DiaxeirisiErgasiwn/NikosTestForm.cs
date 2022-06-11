@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Google.Apis.Auth.OAuth2;
+using Google.Apis.Drive.v3;
+using Google.Apis.Services;
+using Google.Apis.Upload;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +11,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,15 +19,30 @@ namespace DiaxeirisiErgasiwn
 {
     public partial class NikosTestForm : Form
     {
-        public NikosTestForm()
+        Form1 globalForm;
+
+        // Name of google account credentials json
+        public static string jsonName = "homeworkmanagement-dc212cac1689.json";
+        public static FileInfo f = new FileInfo(jsonName);
+
+        // Full path to it
+        static string PathToServiceAccountKey2 = @f.FullName;
+
+        //static string PathToServiceAccountKey = @"S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\homeworkmanagement-dc212cac1689.json";
+        //static string DirectoryId = "1j5GrlfQMXjDwSwYw2VhbixhC16jj4TtS";
+        //static string UploadFileName = "Test1.txt";
+
+        public NikosTestForm(Form1 form1)
         {
+            InitializeComponent();
+            globalForm = form1;
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-            
+            globalForm.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -59,7 +79,6 @@ namespace DiaxeirisiErgasiwn
                 }
                 else
                 {
-
                     MessageBox.Show("Wrong file format");
                 }                
             }
@@ -75,6 +94,53 @@ namespace DiaxeirisiErgasiwn
         private void NikosTestForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(PathToServiceAccountKey2);
+
+            // Load the Service account credentials and define the scope of its access.
+            var credential = GoogleCredential.FromFile(PathToServiceAccountKey2).CreateScoped(DriveService.ScopeConstants.Drive);
+
+            // Create the  Drive service.
+            var service = new DriveService(new BaseClientService.Initializer()
+            {
+                HttpClientInitializer = credential
+            });
+
+            // Search for text files in the directory on my account.
+            var request = service.Files.List();
+            request.Q = "parents in '1j5GrlfQMXjDwSwYw2VhbixhC16jj4TtS'";
+            var response = request.Execute();
+            foreach(var file in response.Files)
+            {
+                MessageBox.Show(file.Name.ToString());
+            }
+
+            // Download a file
+            if(response.Files.Count() > 0) 
+            {
+                // Trying to download them all
+                foreach (var file in response.Files)
+                {
+                    var getRequest = service.Files.Get(file.Id);
+                    var fileStream = new FileStream(file.Name, FileMode.Create, FileAccess.Write);
+                    getRequest.Download(fileStream);
+                }
+                /*
+                var downloadFile = response.Files.FirstOrDefault();
+                var getRequest = service.Files.Get(downloadFile.Id);
+                var fileStream = new FileStream(downloadFile.Name, FileMode.Create, FileAccess.Write);
+                getRequest.Download(fileStream);
+                */
+            }
+
+            MessageBox.Show("Files Downloaded successfully!");
+            MessageBox.Show("End.");
+
+            // A Lamda expression that filters the text files
+            //file => file.MimeType.Equals("tetx/plain")
         }
     }
 }

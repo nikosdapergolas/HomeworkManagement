@@ -166,7 +166,7 @@ namespace DiaxeirisiErgasiwn
 
         private void button3_Click(object sender, EventArgs e)
         {
-            NikosTestForm test = new NikosTestForm();
+            NikosTestForm test = new NikosTestForm(this);
             test.Show();
             this.Hide();
             /*
