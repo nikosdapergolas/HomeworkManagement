@@ -60,7 +60,8 @@ namespace DiaxeirisiErgasiwn
                 if (fileFormat == "zip" || fileFormat == "pdf" || fileFormat == "rar")
                 {
                     MessageBox.Show(file,"Success!");
-
+                    UploadFile(file);
+                    /*
                     // Name of database file
                     string fileName = "HomeworkManagement.db";
                     FileInfo f = new FileInfo(fileName);
@@ -76,6 +77,7 @@ namespace DiaxeirisiErgasiwn
                     SQLiteCommand cmd = new SQLiteCommand(query1, conn);
                     SQLiteDataReader reader = cmd.ExecuteReader();
                     MessageBox.Show("Successfully added the file...i think");
+                    */
                 }
                 else
                 {
@@ -89,6 +91,48 @@ namespace DiaxeirisiErgasiwn
         private void panel1_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Copy;
+        }
+
+        void UploadFile(string filePath)
+        {
+            string serviceAccountEmail = "homework-uploader@homeworkmanagement.iam.gserviceaccount.com";
+            string directoryId = "1j5GrlfQMXjDwSwYw2VhbixhC16jj4TtS";
+            
+            // Load the Service account credentials and define the scope of its access.
+            var credential = GoogleCredential.FromFile(PathToServiceAccountKey2).CreateScoped(DriveService.ScopeConstants.Drive);
+
+            // Create the  Drive service.
+            var service = new DriveService(new BaseClientService.Initializer()
+            {
+                HttpClientInitializer = credential
+            });
+
+            // Upload fiole MetaData
+            var fileMetaData = new Google.Apis.Drive.v3.Data.File()
+            {
+                Name = "test1.pdf",
+                Parents = new List<string>() {directoryId}
+            };
+
+            string uploadedFileId;
+            using (var fsSource = new FileStream(filePath, FileMode.Open, FileAccess.Write))
+            {
+                // Create a new file with MetaData and stream
+                var request = service.Files.Create(fileMetaData, fsSource, "*/*");
+                request.Fields = "*";
+                var results = request.Upload();
+
+                if(results.Status.Equals(UploadStatus.Failed))
+                {
+                    MessageBox.Show("Error");
+                }
+                else
+                {
+                    MessageBox.Show("Success!!");
+                }
+
+                uploadedFileId = request.ResponseBody?.Id;
+            }
         }
 
         private void NikosTestForm_Load(object sender, EventArgs e)
@@ -135,17 +179,26 @@ namespace DiaxeirisiErgasiwn
                     //Testing
                     string fileNameToMove = file.Name;
                     FileInfo f = new FileInfo(fileNameToMove);
-                    string sourcePath = @f.FullName;
-                    string targetPath = @f.FullName + "/googleDriveDownloads";
-                    // Use Path class to manipulate file and directory paths.
-                    string sourceFile = System.IO.Path.Combine(sourcePath, fileNameToMove);
-                    string destFile = System.IO.Path.Combine(targetPath, fileNameToMove);
 
-                    System.IO.File.Move(sourceFile, destFile);
+                    string debugFolder = "Debug";
+                    FileInfo f2 = new FileInfo(debugFolder);
+                    string targetPath = f2.FullName;
+
+                    string sourcePath = @f.FullName;
+                    targetPath = targetPath + "/googleDriveDownloads/" + file.Name;
+
+                    // Use Path class to manipulate file and directory paths.
+                    //string sourceFile = System.IO.Path.Combine(sourcePath, fileNameToMove);
+                    //string destFile = System.IO.Path.Combine(targetPath, fileNameToMove);
+
+                    // Εδω βρίσκει ερορ
+                    //MessageBox.Show(sourcePath + " " + targetPath);
+                    System.IO.File.Move(sourcePath, targetPath);
 
                     // TODO
                     //******************************************************************************************
                     */
+                    
                 }
 
                 /*
@@ -157,7 +210,7 @@ namespace DiaxeirisiErgasiwn
             }
 
                 MessageBox.Show("Files Downloaded successfully!");
-            MessageBox.Show("End.");
+                MessageBox.Show("End.");
 
             // A Lamda expression that filters the text files
             //file => file.MimeType.Equals("tetx/plain")
