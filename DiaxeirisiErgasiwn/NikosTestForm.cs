@@ -175,13 +175,42 @@ namespace DiaxeirisiErgasiwn
             // Download a file
             if(response.Files.Count() > 0) 
             {
+                
                 // Trying to download them all
                 foreach (var file in response.Files)
                 {
                     var getRequest = service.Files.Get(file.Id);
                     var fileStream = new FileStream(file.Name, FileMode.Create, FileAccess.Write);
                     getRequest.Download(fileStream);
+
+                    /*
+                    //******************************************************************************************
+                    // TODO.... Ξανατρέχω τον κώδικα να δω τι exception μου βγάζει σε αυτό το σημείο
+                    //Testing
+                    string fileNameToMove = file.Name;
+                    FileInfo f = new FileInfo(fileNameToMove);
+
+                    string debugFolder = "Debug";
+                    FileInfo f2 = new FileInfo(debugFolder);
+                    string targetPath = f2.FullName;
+
+                    string sourcePath = @f.FullName;
+                    targetPath = targetPath + "/googleDriveDownloads/" + file.Name;
+
+                    // Use Path class to manipulate file and directory paths.
+                    //string sourceFile = System.IO.Path.Combine(sourcePath, fileNameToMove);
+                    //string destFile = System.IO.Path.Combine(targetPath, fileNameToMove);
+
+                    // Εδω βρίσκει ερορ
+                    //MessageBox.Show(sourcePath + " " + targetPath);
+                    System.IO.File.Move(sourcePath, targetPath);
+
+                    // TODO
+                    //******************************************************************************************
+                    */
+                    
                 }
+
                 /*
                 var downloadFile = response.Files.FirstOrDefault();
                 var getRequest = service.Files.Get(downloadFile.Id);
@@ -190,8 +219,8 @@ namespace DiaxeirisiErgasiwn
                 */
             }
 
-            MessageBox.Show("Files Downloaded successfully!");
-            MessageBox.Show("End.");
+                MessageBox.Show("Files Downloaded successfully!");
+                MessageBox.Show("End.");
 
             // A Lamda expression that filters the text files
             //file => file.MimeType.Equals("tetx/plain")
