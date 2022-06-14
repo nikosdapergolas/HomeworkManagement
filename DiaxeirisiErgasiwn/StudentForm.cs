@@ -38,5 +38,12 @@ namespace DiaxeirisiErgasiwn
             Vathmoi v = new Vathmoi(this);
             v.Show();
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HWupload v = new HWupload(this);
+            v.Show();
+        }
     }
 }
