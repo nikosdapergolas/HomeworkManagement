@@ -79,6 +79,9 @@ namespace DiaxeirisiErgasiwn
             if(reader.Read())
             {
                 MessageBox.Show("welcome "+ reader.GetString(1) + " " + reader.GetString(2) + "!! :)","Login Successful");
+                StudentForm sform = new StudentForm(this);
+                sform.Show();
+                this.Hide();
             }
             else
             {

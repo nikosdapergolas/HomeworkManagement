@@ -125,3 +125,4 @@ C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\Diax
 C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Professor_Assignement_Creation.resources
 C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Professor_Front_Page.resources
 C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.CopyComplete
+C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.StudentForm.resources

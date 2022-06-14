@@ -95,43 +95,53 @@ namespace DiaxeirisiErgasiwn
 
         void UploadFile(string filePath)
         {
-            string serviceAccountEmail = "homework-uploader@homeworkmanagement.iam.gserviceaccount.com";
-            string directoryId = "1j5GrlfQMXjDwSwYw2VhbixhC16jj4TtS";
-            
-            // Load the Service account credentials and define the scope of its access.
-            var credential = GoogleCredential.FromFile(PathToServiceAccountKey2).CreateScoped(DriveService.ScopeConstants.Drive);
-
-            // Create the  Drive service.
-            var service = new DriveService(new BaseClientService.Initializer()
+            try
             {
-                HttpClientInitializer = credential
-            });
+                string serviceAccountEmail = "homework-uploader@homeworkmanagement.iam.gserviceaccount.com";
+                string directoryId = "1j5GrlfQMXjDwSwYw2VhbixhC16jj4TtS";
 
-            // Upload fiole MetaData
-            var fileMetaData = new Google.Apis.Drive.v3.Data.File()
-            {
-                Name = "test1.pdf",
-                Parents = new List<string>() {directoryId}
-            };
+                // Load the Service account credentials and define the scope of its access.
+                var credential = GoogleCredential.FromFile(PathToServiceAccountKey2).CreateScoped(DriveService.ScopeConstants.Drive);
 
-            string uploadedFileId;
-            using (var fsSource = new FileStream(filePath, FileMode.Open, FileAccess.Write))
-            {
-                // Create a new file with MetaData and stream
-                var request = service.Files.Create(fileMetaData, fsSource, "*/*");
-                request.Fields = "*";
-                var results = request.Upload();
-
-                if(results.Status.Equals(UploadStatus.Failed))
+                // Create the  Drive service.
+                var service = new DriveService(new BaseClientService.Initializer()
                 {
-                    MessageBox.Show("Error");
-                }
-                else
-                {
-                    MessageBox.Show("Success!!");
-                }
+                    HttpClientInitializer = credential
+                });
 
-                uploadedFileId = request.ResponseBody?.Id;
+                // Upload fiole MetaData
+                var fileMetaData = new Google.Apis.Drive.v3.Data.File()
+                {
+                    Name = "test1.pdf",
+                    Parents = new List<string>() { directoryId }
+                };
+
+                string uploadedFileId;
+                using (var fsSource = new FileStream(filePath, FileMode.Open, FileAccess.Write))
+                {
+                    // Create a new file with MetaData and stream
+                    var request = service.Files.Create(fileMetaData, fsSource, "*/*");
+                    request.Fields = "*";
+                    var results = request.Upload();
+
+
+                    if (results.Status.Equals(UploadStatus.Failed))
+                    {
+                        MessageBox.Show("Error");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Success!!");
+                    }
+
+
+                    uploadedFileId = request.ResponseBody?.Id;
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
             }
         }
 
