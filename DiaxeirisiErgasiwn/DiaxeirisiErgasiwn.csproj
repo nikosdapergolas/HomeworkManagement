@@ -95,6 +95,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HWupload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HWupload.Designer.cs">
+      <DependentUpon>HWupload.cs</DependentUpon>
+    </Compile>
     <Compile Include="NikosTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,14 +121,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentSignUp.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentSignUp.Designer.cs">
       <DependentUpon>StudentSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vathmoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vathmoi.Designer.cs">
+      <DependentUpon>Vathmoi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HWupload.resx">
+      <DependentUpon>HWupload.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NikosTestForm.resx">
       <DependentUpon>NikosTestForm.cs</DependentUpon>
@@ -144,8 +165,14 @@
       <DesignTime>True</DesignTime>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <EmbeddedResource Include="StudentForm.resx">
+      <DependentUpon>StudentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentSignUp.resx">
       <DependentUpon>StudentSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vathmoi.resx">
+      <DependentUpon>Vathmoi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\homeworkmanagement-dc212cac1689.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
