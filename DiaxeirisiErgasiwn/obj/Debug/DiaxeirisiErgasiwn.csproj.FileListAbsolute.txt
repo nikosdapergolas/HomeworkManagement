@@ -126,3 +126,47 @@ C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\Diax
 C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Professor_Front_Page.resources
 C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.CopyComplete
 C:\Users\nikos\source\repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.StudentForm.resources
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Properties\Resources.Designer.cs
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\bin\Debug\homeworkmanagement-dc212cac1689.json
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.exe.config
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.exe
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\DiaxeirisiErgasiwn.pdb
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\EntityFramework.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.Auth.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.Core.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.Drive.v3.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Guna.UI2.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\System.Data.SQLite.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\EntityFramework.xml
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.pdb
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.xml
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.Auth.xml
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.Core.pdb
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.Core.xml
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.Drive.v3.pdb
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Google.Apis.Drive.v3.xml
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\bin\Debug\System.Data.SQLite.xml
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csprojAssemblyReference.cache
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Form1.resources
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.NikosTestForm.resources
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Professor_Assignement_Creation.resources
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Professor_Front_Page.resources
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Properties.Resources.resources
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.StudentForm.resources
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.StudentSignUp.resources
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Vathmoi.resources
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.GenerateResource.cache
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.CoreCompileInputs.cache
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.csproj.CopyComplete
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.exe
+C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.pdb

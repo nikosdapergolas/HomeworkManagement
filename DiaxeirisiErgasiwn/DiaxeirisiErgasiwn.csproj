@@ -127,6 +127,12 @@
     <Compile Include="StudentSignUp.Designer.cs">
       <DependentUpon>StudentSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vathmoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vathmoi.Designer.cs">
+      <DependentUpon>Vathmoi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentSignUp.resx">
       <DependentUpon>StudentSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vathmoi.resx">
+      <DependentUpon>Vathmoi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\homeworkmanagement-dc212cac1689.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

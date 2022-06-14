@@ -31,5 +31,12 @@ namespace DiaxeirisiErgasiwn
             globalForm.Show();
             this.Close();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Vathmoi v = new Vathmoi(this);
+            v.Show();
+        }
     }
 }
