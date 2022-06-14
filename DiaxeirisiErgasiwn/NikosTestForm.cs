@@ -107,7 +107,7 @@ namespace DiaxeirisiErgasiwn
                 HttpClientInitializer = credential
             });
 
-            // Upload fiole MetaData
+            // Upload file MetaData
             var fileMetaData = new Google.Apis.Drive.v3.Data.File()
             {
                 Name = "test1.pdf",
