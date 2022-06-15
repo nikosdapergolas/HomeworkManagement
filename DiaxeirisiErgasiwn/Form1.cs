@@ -294,56 +294,53 @@ namespace DiaxeirisiErgasiwn
 
     public class Person 
     {
-        string name;
-        string surname;
-        string email;
+        string name { get; set; }
+        string surname { get; set; }
+        string email { get; set; }
 
-        public string getName()
+        public string Name
         {
-            return this.name;
+            get { return name; }
+            set { name = value; }
         }
-        public string getSurname()
+        public string Surname
         {
-            return this.surname;
+            get { return surname; }
+            set { surname = value; }
         }
-        public string getEmail()
+        public string Email
         {
-            return this.email;
+            get { return email; }
+            set { email = value; }
         }
-
-        public void setName(string name)
-        {
-            this.name = name;
-        }
-        public void setSurame(string surname)
-        {
-            this.surname = surname;
-        }
-        public void setEmail(string email)
-        {
-            this.email = email;
-        }
-
     }
 
     public class Student : Person
     {
-        string A_M;
-
-        public string getA_M()
+        string a_m;
+        public string A_M
         {
-            return this.A_M;
+            get { return a_m; }
+            set { a_m = value; }
         }
-
-        public void setA_M(string AM)
+        void createTeam(string teamName)
         {
-            this.A_M = AM;
+            Team team = new Team();
+            team.TeamName = teamName;
+            // Μενει σε αυτο το σημείο Να βαλω ως παράμετρο τον αριθμό
+            // των ατόμων της ομάδας, και ανάλογα με αυτόν τον αριθμό, να τρέχει ένα 
+            // for loop που θα ζητάει τα ονόματα και τα ΑΜ για να τα προσθέτει
         }
     }
 
     public class Professor : Person
     {
-        int ID;
+        int id;
+        public int ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
 
         void setHomework(string nameOfHomework, string deadline)
         {
@@ -353,17 +350,7 @@ namespace DiaxeirisiErgasiwn
         void setpoints(int pointsOfHomework)
         {
             Points points = new Points();
-            points.setPointsOfHomework(pointsOfHomework);
-        }
-
-        public int getID()
-        {
-            return this.ID;
-        }
-
-        public void setID(int id)
-        {
-            this.ID = id;
+            points.PointsOfHomework = pointsOfHomework;
         }
 
     }
@@ -371,29 +358,31 @@ namespace DiaxeirisiErgasiwn
     public class Admin : Person
     {
         int adminID;
+        public int AdminID
+        {
+            get { return adminID; }
+            set { adminID = value; }
+        }
 
         void createProfessor(string name, string surname, string email, int id)
         {
             Professor professor = new Professor();
-            professor.setName(name);
-            professor.setSurame(surname);
-            professor.setEmail(email);
-            professor.setID(id);
-        }
-
-        public int getID()
-        {
-            return this.adminID;
-        }
-
-        public void setID(int id)
-        {
-            this.adminID = id;
+            professor.Name = name;
+            professor.Surname = surname;
+            professor.Email = email;
+            professor.ID = id;
         }
     }
 
     public class Team
     {
+        string teamName;
+        public string TeamName
+        {
+            get { return teamName; }
+            set { teamName = value; }
+        }
+
         public List<string> listOfStudents = new List<string>();
     }
 
@@ -401,26 +390,31 @@ namespace DiaxeirisiErgasiwn
     {
         string nameofHomework;
         string deadline;
+        public string NameofHomework
+        {
+            get { return nameofHomework; }
+            set { nameofHomework = value; }
+        }
+        public string Deadline
+        {
+            get { return deadline; }
+            set { deadline = value; }
+        }
 
         public Homework(string nameofHomework, string deadline)
         {
-            this.nameofHomework = nameofHomework;
-            this.deadline = deadline;
+            this.NameofHomework = nameofHomework;
+            this.Deadline = deadline;
         }
     }
 
     public class Points
     {
         int pointsOfHomework;
-
-        public int getPointsOfHomework()
+        public int PointsOfHomework
         {
-            return this.pointsOfHomework;
-        }
-
-        public void setPointsOfHomework(int points)
-        {
-            this.pointsOfHomework = points;
+            get { return pointsOfHomework; }
+            set { pointsOfHomework = value; }
         }
     }
 
