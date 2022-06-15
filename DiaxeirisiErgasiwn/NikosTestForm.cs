@@ -100,6 +100,12 @@ namespace DiaxeirisiErgasiwn
                 string serviceAccountEmail = "homework-uploader@homeworkmanagement.iam.gserviceaccount.com";
                 string directoryId = "1j5GrlfQMXjDwSwYw2VhbixhC16jj4TtS";
 
+                // Upload file MetaData
+                var fileMetaData = new Google.Apis.Drive.v3.Data.File()
+                {
+                    Name = "test1.pdf",
+                    Parents = new List<string>() {directoryId}
+                };
                 // Load the Service account credentials and define the scope of its access.
                 var credential = GoogleCredential.FromFile(PathToServiceAccountKey2).CreateScoped(DriveService.ScopeConstants.Drive);
 
@@ -108,13 +114,6 @@ namespace DiaxeirisiErgasiwn
                 {
                     HttpClientInitializer = credential
                 });
-
-                // Upload fiole MetaData
-                var fileMetaData = new Google.Apis.Drive.v3.Data.File()
-                {
-                    Name = "test1.pdf",
-                    Parents = new List<string>() { directoryId }
-                };
 
                 string uploadedFileId;
                 using (var fsSource = new FileStream(filePath, FileMode.Open, FileAccess.Write))
