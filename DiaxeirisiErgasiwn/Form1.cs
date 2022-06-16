@@ -248,7 +248,11 @@ namespace DiaxeirisiErgasiwn
             professorLoginToolStripMenuItem.BackColor = panel1.BackColor;
             adminLoginToolStripMenuItem.BackColor = panel1.BackColor;
 
-            label4.Text = "Welcome to the Students Portal";
+            label4.Text = "Καλωσορίσατε στο Students Portal";
+
+            // Eργοποίηση δυνατότητας sign up
+            panel2.Enabled = true;
+            panel2.Visible = true;
         }
 
         private void professorLoginToolStripMenuItem_Click(object sender, EventArgs e)
@@ -265,7 +269,11 @@ namespace DiaxeirisiErgasiwn
             professorLoginToolStripMenuItem.BackColor = Color.Black;
             adminLoginToolStripMenuItem.BackColor = panel1.BackColor;
 
-            label4.Text = "             Professors Login";
+            label4.Text = "               Professors Login";
+
+            // Aπενεργοποίηση δυνατότητας sign up
+            panel2.Enabled = false;
+            panel2.Visible = false;
         }
 
         private void adminLoginToolStripMenuItem_Click(object sender, EventArgs e)
@@ -282,7 +290,11 @@ namespace DiaxeirisiErgasiwn
             professorLoginToolStripMenuItem.BackColor = panel1.BackColor;
             adminLoginToolStripMenuItem.BackColor = Color.Black;
 
-            label4.Text = "                Admins only!";
+            label4.Text = "                  Admins μόνο!";
+
+            // Aπενεργοποίηση δυνατότητας sign up
+            panel2.Enabled = false;
+            panel2.Visible = false;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

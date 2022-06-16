@@ -37,12 +37,29 @@ namespace DiaxeirisiErgasiwn
             {
                 if (textBox5.Text != textBox6.Text)
                 {
-                    MessageBox.Show("Password are not the same, Try again", "Error");
+                    MessageBox.Show("Οι 2 κωδικοί που πληκτρολογήσατε δεν είναι ίδιοι. Πρακαλώ προσπαθήστε ξανά", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (textBox1.Text == "")
+                {
+                    MessageBox.Show("Δεν μπορείτε να αφήσετε το πεδίο \"Όνομα\" κενό. Προσπαθήστε ξανά", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (textBox2.Text == "")
+                {
+                    MessageBox.Show("Δεν μπορείτε να αφήσετε το πεδίο \"Επίθετο\" κενό. Προσπαθήστε ξανά", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else if (textBox3.Text == "")
+                {
+                    MessageBox.Show("Δεν μπορείτε να αφήσετε το πεδίο \"Email\" κενό. Προσπαθήστε ξανά", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else if(textBox4.Text == "")
                 {
-                    MessageBox.Show("You cannot leave the username field empty, Try again", "Error");
+                    MessageBox.Show("Δεν μπορείτε να αφήσετε το πεδίο \"Username\" κενό. Προσπαθήστε ξανά", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
+                else if (textBox5.Text == "")
+                {
+                    MessageBox.Show("Δεν μπορείτε να αφήσετε το πεδίο \"Password\" κενό. Προσπαθήστε ξανά", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
                 else
                 {
                     string name = textBox1.Text;
@@ -67,7 +84,9 @@ namespace DiaxeirisiErgasiwn
                     SQLiteDataReader reader = cmd.ExecuteReader();
 
                     conn.Close();
-                    MessageBox.Show("You have been added successfully!! /nRedirecting you back to login page.", "Sign in successful.");
+                    MessageBox.Show("Έχετε καταχωρηθεί στο σύστημα επιτυχώς!! Σας μεταφέρουμε πίσω στην φόρμα εισαγωγής.", "Sign in successful.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    globalForm.Show();
+                    this.Close();
                 }
             }
             catch (Exception exception)
@@ -86,7 +105,6 @@ namespace DiaxeirisiErgasiwn
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             globalForm.Show();
-            //Form1.ActiveForm.BringToFront();
             this.Close();
         }
     }
