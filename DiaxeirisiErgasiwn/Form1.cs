@@ -19,9 +19,9 @@ namespace DiaxeirisiErgasiwn
         public static bool professor_logging_in;
         public static bool admin_logging_in;
 
-        public Student student;
-        public Professor professor;
-        public Admin admin;
+        public static Student student;
+        public static Professor professor;
+        public static Admin admin;
 
         //euakiii
 
@@ -82,11 +82,6 @@ namespace DiaxeirisiErgasiwn
                       
             if(reader.Read())
             {
-                MessageBox.Show("welcome "+ reader.GetString(1) + " " + reader.GetString(2) + "!! :)","Login Successful");
-                StudentForm sform = new StudentForm(this);
-                sform.Show();
-                this.Hide();
-
                 // Περνάω στο public αντικείμενο Student τις τιμές που αντιστοιχούν σε αυτόν στη βάση
                 // Σύμφωνα με το username και το password του
                 student = new Student();
@@ -96,6 +91,12 @@ namespace DiaxeirisiErgasiwn
                 student.Surname = reader.GetString(2);
                 student.Email = reader.GetString(3);
 
+                // Μηνυμα επιτυχίας και χαράς
+                // και καλώ τη δευτερη φόρμα
+                MessageBox.Show("welcome "+ reader.GetString(1) + " " + reader.GetString(2) + "!! :)","Login Successful");
+                StudentForm sform = new StudentForm(this,student);
+                sform.Show();
+                this.Hide();
 
             }
             else
