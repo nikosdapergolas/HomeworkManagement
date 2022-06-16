@@ -171,3 +171,6 @@ C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\Diaxe
 C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.exe
 C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.pdb
 C:\Users\Κίμων Χατζόπουλος\Source\Repos\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.HWupload.resources
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.HWupload.resources
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.StudentForm.resources
+S:\visual_studio_projects\C#\HomeworkManagement\DiaxeirisiErgasiwn\obj\Debug\DiaxeirisiErgasiwn.Vathmoi.resources
